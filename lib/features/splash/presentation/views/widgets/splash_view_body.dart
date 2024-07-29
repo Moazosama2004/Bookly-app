@@ -3,6 +3,7 @@ import 'package:bookly_app/features/splash/presentation/views/widgets/sliding_te
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../../constants.dart';
 import '../../../../home/presentation/views/home_view.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -58,7 +59,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void goToHome() {
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(kTransitionDuration, () {
       Get.to(
         () => const HomeView(),
         transition: Transition.rightToLeftWithFade,
