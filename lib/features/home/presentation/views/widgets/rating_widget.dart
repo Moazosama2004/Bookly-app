@@ -15,22 +15,22 @@ class RatingWidget extends StatelessWidget {
           style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
         ),
         Row(
-          children: [
-            Icon(
+          children:   [
+            const Icon(
               FontAwesomeIcons.solidStar,
               color: Colors.amber,
             ),
-            SizedBox(
+            const SizedBox(
               width: 6.3,
             ),
-            Text(
+            const Text(
               '4.8',
               style: Styles.textStyle16,
             ),
-            SizedBox(
+            const SizedBox(
               width: 5,
             ),
-            Text(
+             Text(
               '(2375)',
               style: Styles.textStyle14
                   .copyWith(color: Colors.white.withOpacity(0.5)),

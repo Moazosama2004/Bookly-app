@@ -24,7 +24,7 @@ class BestSellerItem extends StatelessWidget {
                   )),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 30.0,
           ),
           Expanded(
@@ -40,17 +40,17 @@ class BestSellerItem extends StatelessWidget {
                       style:
                           Styles.textStyle20.copyWith(fontFamily: kGTSectraFine),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 3,
                 ),
-                Text(
+                const Text(
                   'J.K Rowling',
                   style: Styles.textStyle14,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 3,
                 ),
-                RatingWidget(),
+                const RatingWidget(),
               ],
             ),
           ),

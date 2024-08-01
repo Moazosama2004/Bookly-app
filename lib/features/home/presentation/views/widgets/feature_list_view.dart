@@ -10,11 +10,11 @@ class FeatureListView extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.3,
       child: ListView.builder(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 7.0),
+            return const Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 7.0),
               child: FeatureItem(),
             );
           }),
