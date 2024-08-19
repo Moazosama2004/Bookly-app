@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 
 class FeatureItem extends StatelessWidget {
-  const FeatureItem({Key? key}) : super(key: key);
+  const FeatureItem({Key? key, required this.imageUrl}) : super(key: key);
 
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.7/4,
+      aspectRatio: 2.7 / 4,
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16.0),
+            borderRadius: BorderRadius.circular(16.0),
             color: Colors.red,
-            image: const DecorationImage(
+            image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/images/test_image.png'),
+              image: NetworkImage(imageUrl),
             )),
       ),
     );

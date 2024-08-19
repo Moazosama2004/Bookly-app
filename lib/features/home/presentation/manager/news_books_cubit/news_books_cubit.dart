@@ -4,7 +4,7 @@ import 'package:bookly_app/features/home/data/repos/home_repo.dart';
 import 'news_books_states.dart';
 
 class NewsBooksCubit extends Cubit<NewsBooksStates> {
-  NewsBooksCubit(super.initialState, this.homeRepo);
+  NewsBooksCubit(this.homeRepo) : super(NewsBooksInitalState());
   final HomeRepo homeRepo;
 
   Future<void> fetchNewsBooks () async{

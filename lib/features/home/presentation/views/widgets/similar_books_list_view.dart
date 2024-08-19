@@ -15,7 +15,9 @@ class SimilarBooksListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return const Padding(
               padding:  EdgeInsets.symmetric(horizontal: 5.0),
-              child: FeatureItem(),
+              child: FeatureItem(
+                imageUrl: 'https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg',
+              ),
             );
           }),
     );
