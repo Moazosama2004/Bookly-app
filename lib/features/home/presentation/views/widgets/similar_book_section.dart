@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
 
 class SimilarBookSection extends StatelessWidget {
-  const SimilarBookSection({Key? key})
-      : super(key: key);
-
+  const SimilarBookSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +19,7 @@ class SimilarBookSection extends StatelessWidget {
         const SizedBox(
           height: 16.0,
         ),
-        SimilarBooksListView(
-        ),
+        const SimilarBooksListView(),
         const SizedBox(
           height: 40.0,
         ),

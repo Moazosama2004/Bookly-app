@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 import 'custom_app_bar_book_details_view.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({Key? key})
+  const BookDetailsViewBody({Key? key, required this.bookModel})
       : super(key: key);
+
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,14 +23,15 @@ class BookDetailsViewBody extends StatelessWidget {
                   child: Column(
                     children: [
                       const CustomAppBarBookDetailsView(),
-                      const BookDetails(),
+                      BookDetails(
+                        bookModel: bookModel,
+                      ),
                       const Expanded(
                         child: SizedBox(
                           height: 50.0,
                         ),
                       ),
-                      SimilarBookSection(
-                      ),
+                      const SimilarBookSection(),
                     ],
                   ),
                 ))
