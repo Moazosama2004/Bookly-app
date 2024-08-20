@@ -3,7 +3,7 @@ import 'package:bookly_app/features/home/presentation/views/widgets/rating.dart'
 import 'package:flutter/material.dart';
 
 class RatingWidget extends StatelessWidget {
-  const RatingWidget({Key? key}) : super(key: key);
+  const RatingWidget({Key? key, }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +11,12 @@ class RatingWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          r'19.99 $',
+          'Free',
           style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
         ),
-        const Rating(),
+        const Rating(
+        ),
       ],
     );
   }
 }
-
-

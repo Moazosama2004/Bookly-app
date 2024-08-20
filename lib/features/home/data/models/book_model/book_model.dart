@@ -46,7 +46,7 @@ class BookModel {
 				'id': id,
 				'etag': etag,
 				'selfLink': selfLink,
-				'volumeInfo': volumeInfo?.toJson(),
+				'volumeInfo': volumeInfo.toJson(),
 				'saleInfo': saleInfo?.toJson(),
 				'accessInfo': accessInfo?.toJson(),
 				'searchInfo': searchInfo?.toJson(),
