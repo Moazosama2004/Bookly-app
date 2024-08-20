@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 
 abstract class Failure {
@@ -22,11 +24,8 @@ class ServerFailure extends Failure {
             dioExp.response!.statusCode!, dioExp.response!.data);
       case DioExceptionType.cancel:
         return ServerFailure('Request to ApiServer was canceld');
-      case DioExceptionType.unknown:
-        if (dioExp.message!.contains('SocketException')) {
+      case DioExceptionType.connectionError:
           return ServerFailure('No Internet Connection');
-        }
-        return ServerFailure('Unexpected Error, Please try again!');
       default:
         return ServerFailure('Opps There was an Error, Please try again');
     }
